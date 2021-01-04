@@ -19,6 +19,15 @@
   })(window,document,'script','dataLayer','GTM-WQD88XW');</script>
   <!-- End Google Tag Manager -->
 
+  <script>
+  function trackLienProduits(lien) {
+    window.dataLayer.push({
+      'event': 'Lien vers la page Produits',
+      'lien': lien,
+    });
+  }
+  </script>
+
   <!-- plugins -->
   
   <link rel="stylesheet" href="http://acme.golpaygani.fr/plugins/bootstrap/bootstrap.min.css ">
@@ -108,7 +117,7 @@ height=""0"" width=""0"" style=""display:none;visibility:hidden""></iframe></nos
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed dia</p>
         
         
-        <a href="products" class="btn btn-primary mr-3">All Products</a>
+        <a href="products" onclick="trackLienProduits('header')" class="btn btn-primary mr-3">All Products</a>
         
         
 
@@ -171,7 +180,7 @@ height=""0"" width=""0"" style=""display:none;visibility:hidden""></iframe></nos
         <h2 class="text-white">Buy one Get One Free Taba Cream</h2>
         <p class="text-white">Available for limited time only. Grab one while you still can!</p>
         
-        <a href="http://acme.golpaygani.fr/products" class="btn btn-light">All Products</a>
+        <a href="http://acme.golpaygani.fr/products" onclick="trackLienProduits('banner_top')" class="btn btn-light">All Products</a>
         
       </div>
       <div class="col-lg-4 col-md-5 position-relative">
@@ -570,7 +579,7 @@ height=""0"" width=""0"" style=""display:none;visibility:hidden""></iframe></nos
         <h2 class="text-white">Buy one Get One Free Taba Cream</h2>
         <p class="text-white">Available for limited time only. Grab one while you still can!</p>
         
-        <a href="http://acme.golpaygani.fr/products" class="btn btn-light">All Products</a>
+        <a href="http://acme.golpaygani.fr/products" onclick="trackLienProduits('banner_bottom')" class="btn btn-light">All Products</a>
         
       </div>
       <div class="col-lg-4 col-md-5 position-relative">
