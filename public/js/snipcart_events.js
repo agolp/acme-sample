@@ -1,14 +1,14 @@
 function itemAdded(item) {
-  alert("Item added");
+  window.dataLayer.push({
+    'event': 'addToCart',
+    'name': item.name,
+  });
 }
-
 
 // From https://github.com/snipcart/snipcart-gtm/blob/master/snipcart.gtm.js
 document.addEventListener('snipcart.ready', function() {
   //Subscribing to different events
-  Snipcart.subscribe('item.added', function(item) {
-    itemAdded(item);
-  });
+  Snipcart.subscribe('item.added', itemAdded);
 
   Snipcart.subscribe('item.removed', function(item) {
     itemRemoved(item);
