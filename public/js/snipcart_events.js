@@ -1,7 +1,7 @@
 function itemAdded(item) {
   window.dataLayer.push({
-    'event': 'addToCart',
-    'name': item.name,
+    'event': 'Add to Cart',
+    'product': item.name,
   });
 }
 
